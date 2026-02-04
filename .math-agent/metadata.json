@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-02-04T23:59:15.459Z",
+  "generator": "scibook-math-agent",
+  "version": "1.0.0",
+  "topic": "How can we obtain sharp, non-asymptotic probability bounds for eigenvalues of random matrices that improve upon existing results?",
+  "title": "Probabilistic Bounds for Eigenvalues of Random Matrices",
+  "tags": [
+    "probability",
+    "linear-algebra",
+    "random-matrices",
+    "spectral-theory",
+    "concentration-inequalities"
+  ]
+}
