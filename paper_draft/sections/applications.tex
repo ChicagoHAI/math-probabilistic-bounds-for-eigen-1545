@@ -1,0 +1,23 @@
+\section{Applications}\label{sec:applications}
+
+Our results have several important applications:
+
+\subsection{Covariance Estimation}
+
+For high-dimensional data $X_1,\ldots,X_n \in \R^p$, our bounds imply that the sample covariance matrix concentrates around the population covariance in spectral norm:
+
+\begin{corollary}
+Let $\hat{\Sigma}_n$ be the sample covariance matrix and $\Sigma$ the population covariance. Then:
+\[ \Prob(\spectral{\hat{\Sigma}_n - \Sigma} \geq t) \leq 2\exp(-cnt^2) \]
+\end{corollary}
+
+\subsection{Random Graphs}
+
+For the adjacency matrix $A$ of an Erdős-Rényi random graph, our results give tight bounds on the second eigenvalue:
+
+\begin{corollary}
+Let $G(n,p)$ be an Erdős-Rényi random graph with $p \geq c\log n/n$. Then:
+\[ \Prob(|\lambda_2(A)| \geq 2\sqrt{np(1-p)} + t) \leq 2\exp(-ct^2) \]
+\end{corollary}
+
+These bounds have implications for spectral clustering and community detection algorithms.
