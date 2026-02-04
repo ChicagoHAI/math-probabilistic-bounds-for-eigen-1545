@@ -1,0 +1,24 @@
+\section{Preliminaries}\label{sec:preliminaries}
+
+We begin by establishing notation and reviewing key concepts from random matrix theory.
+
+\begin{definition}
+For a matrix $A \in \R^{n \times n}$, we denote:
+\begin{itemize}
+    \item The eigenvalues of $A$ as $\lambda_1(A) \geq \lambda_2(A) \geq \cdots \geq \lambda_n(A)$
+    \item The spectral norm $\spectral{A} = \max_{i} |\lambda_i(A)|$
+    \item The Frobenius norm $\frobenius{A} = \sqrt{\sum_{i,j} |A_{ij}|^2}$
+\end{itemize}
+\end{definition}
+
+\begin{definition}
+A random matrix $X \in \R^{n \times n}$ is called sub-gaussian if its entries $X_{ij}$ are independent sub-gaussian random variables with parameter $K$, meaning:
+\[ \E[e^{tX_{ij}}] \leq e^{K^2t^2/2} \quad \text{for all } t \in \R \]
+\end{definition}
+
+We will make frequent use of the following classical result:
+
+\begin{theorem}[Matrix Bernstein Inequality \cite{tropp2012user}]
+Let $X_1,\ldots,X_m$ be independent random matrices in $\R^{n \times n}$ with $\E[X_k]=0$ and $\spectral{X_k} \leq R$ almost surely. Let $Z = \sum_{k=1}^m X_k$ and $v = \norm{\sum_{k=1}^m \E[X_k^2]}$. Then for all $t \geq 0$:
+\[ \Prob(\spectral{Z} \geq t) \leq 2n \exp\left(-\frac{t^2/2}{v + Rt/3}\right) \]
+\end{theorem}
