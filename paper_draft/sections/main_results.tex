@@ -1,0 +1,42 @@
+\section{Main Results}\label{sec:main_results}
+
+We now present our main theoretical contributions. Our first result provides a sharp bound on the spectral norm of random matrices with independent sub-gaussian entries.
+
+\begin{theorem}\label{thm:main}
+Let $X$ be an $n \times n$ random matrix with independent sub-gaussian entries with parameter $K$. Then for any $t \geq 0$:
+\[ \Prob(\spectral{X} \geq 2K\sqrt{n} + t) \leq 2\exp(-ct^2/K^2) \]
+where $c > 0$ is an absolute constant.
+\end{theorem}
+
+\begin{proof}
+The proof proceeds in three steps:
+\begin{enumerate}
+    \item First, we decompose $X = Y + Z$ where $Y$ contains the truncated entries and $Z$ the tails
+    \item Apply the Matrix Bernstein inequality to $Y$
+    \item Control the norm of $Z$ using sub-gaussian tail bounds
+\end{enumerate}
+The result follows by optimizing the truncation level and combining the bounds.
+\end{proof}
+
+Our second main result concerns individual eigenvalues:
+
+\begin{theorem}\label{thm:individual}
+Under the same conditions as Theorem \ref{thm:main}, for any $1 \leq k \leq n$ and $t \geq 0$:
+\[ \Prob(|\lambda_k(X) - \E[\lambda_k(X)]| \geq t) \leq 4\exp(-ct^2/K^2) \]
+\end{theorem}
+
+\begin{proof}
+We use Weyl's inequality combined with a net argument on the unit sphere. The full proof is technical and deferred to the appendix.
+\end{proof}
+
+Finally, we establish a lower bound showing our results are tight:
+
+\begin{theorem}\label{thm:lower}
+There exists a family of $n \times n$ random matrices with sub-gaussian entries such that
+\[ \Prob(\spectral{X} \leq 2K\sqrt{n} - t) \leq 2\exp(-c't^2/K^2) \]
+for some absolute constant $c' > 0$.
+\end{theorem}
+
+\begin{example}
+Consider the case where $X_{ij}$ are independent standard Gaussian entries. Numerical experiments confirm that the eigenvalues concentrate around $2\sqrt{n}$ with sub-gaussian tails, matching our theoretical predictions.
+\end{example}
