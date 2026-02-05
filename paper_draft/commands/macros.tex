@@ -1,7 +1,14 @@
 % Paper-specific macros
-\newcommand{\E}{\mathbb{E}}
-\newcommand{\Prob}{\mathbb{P}}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\tr}{\mathrm{tr}}
-\newcommand{\spectral}[1]{\sigma_{\max}(#1)}
-\newcommand{\frobenius}[1]{\|#1\|_F}
+% Using providecommand to avoid conflicts with math.tex
+
+% Common groups (not in math.tex)
+\providecommand{\GL}{\mathrm{GL}}
+\providecommand{\SL}{\mathrm{SL}}
+\providecommand{\SO}{\mathrm{SO}}
+\providecommand{\Sp}{\mathrm{Sp}}
+\providecommand{\Mat}{\mathrm{Mat}}
+\providecommand{\Lyap}{\lambda}
+
+% The following are already defined in math.tex, using providecommand as safety
+\providecommand{\Prob}{\mathbb{P}}
+\providecommand{\E}{\mathbb{E}}
